@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Tabbar from '../components/Tabbar.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
+  {
+    path:'/tabbar',
+    component: Tabbar
+  },
   {
     path: '/',
     name: 'Home',
@@ -21,7 +26,9 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
+  mode:'history',
   routes
+  
 })
 
 export default router
